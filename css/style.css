@@ -17,6 +17,135 @@ body a {
 cursor: pointer !important;
 }
 
+header {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+}
+
+
+/* Giving a background-color to the nav container. */
+
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+
+nav ul {
+    float: right;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+/* Positioning the navigation items inline */
+
+nav ul li {
+    margin: 0px 0.3em;
+    display: inline-block;
+    float: left;
+}
+
+/* Styling the links */
+
+nav ul.menu li a {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    padding-left: 0;
+    padding-right: 0;
+    padding: 0.5em 1.5em;
+    background: transparent;
+    font-weight: 400;
+}
+
+
+nav ul li ul li:hover {
+    background: transparent;
+
+}
+
+
+/* Background color change on Hover */
+
+.menu li.active a {
+    color: #03f4eb;
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    /* has to be the same number as the "line-height" of "nav a" */
+    top: 30px;
+    background: #fff;
+    padding: 10px;
+}
+
+/* Display Dropdowns on Hover */
+
+nav ul li:hover > ul {
+    display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+    margin: 0;
+}
+
+nav ul.menu li ul li a {
+    color: #333;
+    padding: 5px 10px;
+    display: block;
+}
+
+nav ul.menu li ul li a:hover {
+    color: #03f4eb;
+    background:transparent;
+}
+
+/* Second, Third and more Tiers 
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    /* has to be the same number as the "width" of "nav ul ul li" */
+    left: 170px;
+}
+
+
+/* Change ' +' in order to change the Dropdown symbol */
+
+li > a:only-child:after {
+    content: '';
+}
+
+
 .main-content {
     background: url(../images/bg-1.jpg) center no-repeat;
     -webkit-background-size: cover;
@@ -388,7 +517,131 @@ section#gallery {
     margin-bottom: 15px;
 }
 
+/* git and commit */
+h3.tittle,
+h3.tittle.two {
+    font-size: 2.3em;
+    font-weight: 400;
+    color: #33353a;
+    text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
+    text-transform: capitalize;
+}
 
+h3.tittle.two {
+    color: #fff;
+}
+
+.testi {
+    background: black ;
+    background-size: cover;
+    position: relative;
+}
+
+h6.b-w3ltxt {
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+h6.b-w3ltxt span {
+    font-weight: normal;
+    color: #03f4eb;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+.testi-cgrid p {
+    line-height: 1.8em;
+}
+.testi-cgrid p span.fa {
+    color: #03f4eb;
+}
+
+.testi-icon img{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border: 5px solid #f6f6f6;
+    background: #eee;
+}
+
+.testi-icon span.fa {
+    font-size: 1.4em;
+}
+.testi-cgrid {
+    background: #fff;
+    padding: 2em 1em;
+}
+.border-right-grid{
+     border-right: 8px solid #000000;
+    
+}
+.border-left-grid{
+     border-left: 8px solid #000000;
+    
+}
+/* //git and commit*/
+
+/*-- pretotipo --*/
+.stats h3.heading {
+    color: #f8f9fa;
+}
+
+.stats p {
+    color: #ccc;
+}
+
+.stats-left h4 span {
+    font-size: 50px;
+    font-weight: 600;
+    color: #0be881;
+}
+
+.stats-left h4 {
+    color: #fff;
+}
+
+.stats-right h4 {
+    font-size: 2.4em;
+    font-weight: 700;
+    margin: 15px 0;
+    color: #fff;
+}
+
+
+.stats-right span.fa {
+    color: #212529;
+    font-size: 20px;
+    background: rgb(248, 249, 250);
+    width: 65px;
+    height: 65px;
+    text-align: center;
+    line-height: 65px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.stats {
+    background: url(../images/bg-4.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    position: relative;
+}
+
+.brands a span.fa {
+    font-size: 3em;
+    color: #333;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+
+/*-- //pretotipo --*/
 
 /*-- Responsive design --*/
 
